@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { productsData } from '../../data/productsData';
+import axios from 'axios'
 
 import './Details.scss';
 
 const Details = () => {
   let params = useParams();
 
-  const product = productsData.find((p) => p._id === params.id);
+  const [product, setProduct] = useState({});
+
+  const fetchProduct = async () => {
+    const { data } = await axios.get(`/api/products/${params.id}`);
+
+    setProduct(data);
+  }
+
+  useEffect(() => {
+    fetchProduct();
+  }, []);
 
   return (
     <div className='app__productDetails-container'>
