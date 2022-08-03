@@ -2,7 +2,7 @@ export const productsData = [
   {
     _id: '1',
     name: 'White Tshirt',
-    image: '/images/tshirts/white-shirt.jpg',
+    image: '/images/tshirts/white-tshirt.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     brand: 'Lorem Ipsum',
@@ -15,7 +15,7 @@ export const productsData = [
   {
     _id: '2',
     name: 'Black Tshirt',
-    image: '/images/tshirts/black-shirt.jpg',
+    image: '/images/tshirts/black-tshirt.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     brand: 'Lorem Ipsum',
@@ -28,7 +28,7 @@ export const productsData = [
   {
     _id: '3',
     name: 'Red Tshirt',
-    image: '/images/tshirts/red-shirt.jpg',
+    image: '/images/tshirts/red-tshirt.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     brand: 'Lorem Ipsum',

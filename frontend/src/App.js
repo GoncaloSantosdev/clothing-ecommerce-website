@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 // Routes
-import { Home } from './routes';
+import { Home, ProductDetails } from './routes';
 // Layout
 import { Navbar } from './layout';
 
@@ -13,6 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}/>
+        <Route path='/products/:id' element={<ProductDetails />} />
       </Routes>
     </div>
   );

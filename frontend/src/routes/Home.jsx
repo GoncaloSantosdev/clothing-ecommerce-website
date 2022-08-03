@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Products } from '../containers';
 
 const Home = () => {
   return (
-    <div className='app__home'>Home</div>
+    <div className='app__home'>
+      <Products />
+    </div>
   )
 }
 

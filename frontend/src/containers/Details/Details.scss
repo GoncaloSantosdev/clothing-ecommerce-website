@@ -1,0 +1,19 @@
+.app__productDetails-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+    img{
+        width: 50%;
+    }
+}
+
+.app__productDetails-container-content{
+    width: 40%;
+    padding: 3rem;
+
+    p{
+        margin: 1.5rem 0;
+    }
+}
