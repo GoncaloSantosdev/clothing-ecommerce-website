@@ -1,6 +1,5 @@
-const productsData = [
+const products = [
   {
-    _id: '1',
     name: 'White Tshirt',
     image: '/images/tshirts/white-tshirt.jpg',
     description:
@@ -13,7 +12,6 @@ const productsData = [
     reviews: 3,
   },
   {
-    _id: '2',
     name: 'Black Tshirt',
     image: '/images/tshirts/black-tshirt.jpg',
     description:
@@ -26,7 +24,6 @@ const productsData = [
     reviews: 8,
   },
   {
-    _id: '3',
     name: 'Red Tshirt',
     image: '/images/tshirts/red-tshirt.jpg',
     description:
@@ -39,7 +36,6 @@ const productsData = [
     reviews: 5,
   },
   {
-    _id: '4',
     name: 'Gray Hat',
     image: '/images/hats/gray-hat.jpg',
     description:
@@ -52,7 +48,6 @@ const productsData = [
     reviews: 12,
   },
   {
-    _id: '5',
     name: 'Yellow Hat',
     image: '/images/hats/yellow-hat.jpg',
     description:
@@ -65,7 +60,6 @@ const productsData = [
     reviews: 4,
   },
   {
-    _id: '6',
     name: 'Green Hat',
     image: '/images/hats/green-hat.jpg',
     description:
@@ -78,7 +72,6 @@ const productsData = [
     reviews: 12,
   },
   {
-    _id: '7',
     name: 'Black Pants',
     image: '/images/pants/black-pants.jpg',
     description:
@@ -91,7 +84,6 @@ const productsData = [
     reviews: 10,
   },
   {
-    _id: '8',
     name: 'Gray Pants',
     image: '/images/pants/gray-pants.jpg',
     description:
@@ -104,7 +96,6 @@ const productsData = [
     reviews: 5,
   },
   {
-    _id: '9',
     name: 'White Pants',
     image: '/images/pants/white-pants.jpg',
     description:
@@ -118,4 +109,4 @@ const productsData = [
   },
 ];
 
-module.exports = productsData;
+export default products;

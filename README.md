@@ -3,7 +3,7 @@
 # 1 - Create Frontend Folder ( npx install create-react-app )
 # 2 - Install Frontend Dependencies ( React Router, Sass, React Icons )
 # 3 - Create Frontend Folder Structure
-# 4 - Create basic styles
+# 4 - Create reset styles
 # 5 - Create Home Route and implement react router 
 # 6 - Create Navbar
 # 7 - List Products 
@@ -15,3 +15,11 @@
 # 13 - Fetch products from react
 # 14 - Add ( "proxy": "http://127.0.0.1:4000", ) to Frontend pakcage.json
 # 15 - Fetch Single Product from react
+# 16 - Install nodemon and concurrently
+# 17 - Config package.json with concurrently to run frontend and backend at the same time
+# 18 - Add Env Files
+# 19 - Setup MongoDB atlas & Compass
+# 20 - Connect app to database with mongoose
+# 21 - Create mongoose schemas for orders, products and users
+# 22 - Prepare Data & Implement bycript
+# 23 - Add Data to the database
