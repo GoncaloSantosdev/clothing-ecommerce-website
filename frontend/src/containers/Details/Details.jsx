@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios'
 
 import './Details.scss';
 
 const Details = () => {
+  const navigate = useNavigate();
   let params = useParams();
 
   const [product, setProduct] = useState({});
@@ -30,6 +31,7 @@ const Details = () => {
           <p>{product.description}</p>
           <p>Status: {product.stock > 0 ? 'In Stock' : 'Out Of Stock'}</p>
           <button className='btn-primary'>Add to cart</button>
+          <button className='btn-primary' onClick={() => navigate(-1)} style={{marginLeft: '1rem'}}>Go Back</button>
         </div>
     </div>
   )
