@@ -23,3 +23,5 @@
 # 21 - Create mongoose schemas for orders, products and users
 # 22 - Prepare Data & Implement bycript
 # 23 - Add Data to the database
+# 24 - Fetch products from the database
+# 25 - Implement Redux - Create a Redux Store ( redux react-redux redux-thunk redux-devtools-extension )
