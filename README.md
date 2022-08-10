@@ -1,5 +1,18 @@
 ### Mern Stack Ecommerce Website ###
 
+E-Commerce Application
+
+Features:
+    [Core] User Login and Registration
+    [Core] Catalogue Page with [Stretch]User Reviews
+    [Core] Product Page/Component With Product Info
+    [Core] Cart For User Products
+    [Stretch] Admin product management
+    [Stretch] User management page
+    [Super Stretch] Stripe or Paypal Integration
+
+All Steps: 
+
 # 1 - Create Frontend Folder ( npx install create-react-app )
 # 2 - Install Frontend Dependencies ( React Router, Sass, React Icons )
 # 3 - Create Frontend Folder Structure
@@ -31,4 +44,5 @@
 # 29 - Create Add to Cart Route
 # 30 - Create Cart action & reducer
 # 31 - Save items to localstorage & add to cart functionality
+
 
