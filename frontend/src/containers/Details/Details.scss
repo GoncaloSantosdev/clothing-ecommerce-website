@@ -33,4 +33,16 @@
     p{
         margin: 1.5rem 0;
     }
+
+    .app__productDetails-quantity{
+        display: flex;
+        align-items: center;
+        margin-top: -1.5rem;
+
+        select{
+            width: 10%;
+            margin-left: 1rem;
+        }
+    }
 }
+

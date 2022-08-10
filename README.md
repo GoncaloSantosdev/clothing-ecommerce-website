@@ -25,3 +25,10 @@
 # 23 - Add Data to the database
 # 24 - Fetch products from the database
 # 25 - Implement Redux - Create a Redux Store ( redux react-redux redux-thunk redux-devtools-extension )
+# 26 - Fetch all products with redux ( create product actions & product reducers )
+# 27 - Implement Loader Spinner (npm i react-loader-spinner)
+# 28 - Add quantity to product details
+# 29 - Create Add to Cart Route
+# 30 - Create Cart action & reducer
+# 31 - Save items to localstorage & add to cart functionality
+

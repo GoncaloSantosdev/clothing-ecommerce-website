@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 // Routes
-import { Home, ProductDetails } from './routes';
+import { Home, ProductDetails, Cart } from './routes';
 // Layout
 import { Navbar } from './layout';
 
@@ -14,6 +14,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/products/:id' element={<ProductDetails />} />
+        <Route path="/cart">
+          <Route path="" element={<Cart />} />
+          <Route path=":id" element={<Cart />} />
+        </Route>
       </Routes>
     </div>
   );

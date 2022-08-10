@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Product } from '../../components';
+import { Product, Loader } from '../../components';
 import { listProducts } from '../../redux/actions/productActions';
 
 import './Products.scss';
@@ -18,7 +18,7 @@ const Products = () => {
   return (
       <div className="app__home-products container">
         {loading ? (
-          <h2>Loading</h2>
+          <Loader />
         ) : error ? (
           <h2>{error}</h2>
         ) : (
