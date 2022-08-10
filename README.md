@@ -45,4 +45,14 @@ All Steps:
 # 30 - Create Cart action & reducer
 # 31 - Save items to localstorage & add to cart functionality
 
+Documentation: 
+https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend
+https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/backend
+
+Deployment:
+
+
+Author: 
+
+Gonçalo Diegues dos Santos
 
