@@ -46,6 +46,9 @@ All Steps:
 # 31 - Save items to localstorage & add & remove to cart functionality
 # 32 - Create user authentication endpoint
 # 33 - Install JWT (npm install jsonwebtoken)
+# 34 - Generate a token
+# 35 - Create user reducer & action
+# 36 - Create login page
 
 Documentation: 
  - https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend 

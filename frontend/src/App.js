@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 // Routes
-import { Home, ProductDetails, Cart } from './routes';
+import { Home, ProductDetails, Cart, LogIn } from './routes';
 // Layout
 import { Navbar } from './layout';
 
@@ -18,6 +18,7 @@ function App() {
           <Route path="" element={<Cart />} />
           <Route path=":id" element={<Cart />} />
         </Route>
+        <Route path='/signIn' element={<LogIn />} />
       </Routes>
     </div>
   );
