@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../redux/actions/cartActions';
+import { addToCart, removeFromCart } from '../redux/actions/cartActions';
 
 import { FaTrash } from 'react-icons/fa';
 import './Cart.scss';
@@ -28,8 +28,12 @@ const Cart = () => {
 
   console.log(qty);
 
-  const removeFromCart = (id) => {
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));
+  }
 
+  const checkoutHandler = () => {
+    navigate(`/login?redirect=${"/shipping"}`)
   }
 
   return (
@@ -45,12 +49,21 @@ const Cart = () => {
               <div className="app__cart-item-info">
                 <p>{item.name}</p>
                 <p>${item.price}</p>
-                <button className='btn-primary' onClick={() => removeFromCart(item.product)}><FaTrash /></button>
+                <button className='btn-primary' onClick={() => removeFromCartHandler(item.product)}><FaTrash /></button>
               </div>
             </div>
           ))}
         </div>
       )}
+
+      <div className="app__cart-bill">
+        <h3>{cartItems.reduce((acc, item) => acc + item.qty, 0)} items</h3>
+        <div className="app__cart-bill-value">
+          <h3>Total Value:</h3>
+          <p>${cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)}</p>
+        </div>
+        <button className="btn-primary" disabled={cartItems.length === 0} onClick={checkoutHandler}>Checkout</button>
+      </div>
     </div>
   )
 }

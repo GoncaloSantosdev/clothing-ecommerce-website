@@ -31,3 +31,28 @@
         background: #FAFAFF;
     }
 }
+
+.app__cart-bill{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+
+        *{
+            margin: .5rem;
+        }
+    }
+    
+
+    .app__cart-bill-value{
+        display: flex;
+        align-items: center;
+
+        p{
+            margin-left: 1rem;
+        }
+    }
+}

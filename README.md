@@ -43,7 +43,22 @@ All Steps:
 # 28 - Add quantity to product details
 # 29 - Create Add to Cart Route
 # 30 - Create Cart action & reducer
-# 31 - Save items to localstorage & add to cart functionality
+# 31 - Save items to localstorage & add & remove to cart functionality
+# 32 - Create user authentication endpoint
+# 33 - Install JWT (npm install jsonwebtoken)
+
+Documentation: 
+ - https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend 
+ - https://github.com/-GoncaloSantosdev/clothing-ecommerce-website/tree/main/backend
+
+Deployment:
+
+  -
+  -
+
+Author:
+
+Gonçalo Diegues dos Santos
 
 Documentation: 
 https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend
