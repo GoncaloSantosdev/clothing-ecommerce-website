@@ -49,28 +49,24 @@ All Steps:
 # 34 - Generate a token
 # 35 - Create user reducer & action
 # 36 - Create login page
+# 37 - Change navbar after login
+# 38 - Logout button
+# 39 - Style Sign In Page
+# 40 - Register action and reducer
+# 41 - Create Profile Page 
+# 42 - Update user info 
 
 Documentation: 
- - https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend 
- - https://github.com/-GoncaloSantosdev/clothing-ecommerce-website/tree/main/backend
+- https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend
+- https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/backend
 
 Deployment:
 
-  -
-  -
-
-Author:
-
-Gonçalo Diegues dos Santos
-
-Documentation: 
-https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend
-https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/backend
-
-Deployment:
+-
+-
 
 
 Author: 
 
-Gonçalo Diegues dos Santos
+- Gonçalo Diegues dos Santos
 

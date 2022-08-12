@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 // Routes
-import { Home, ProductDetails, Cart, LogIn } from './routes';
+import { Home, ProductDetails, Cart, LogIn, Register, Profile } from './routes';
 // Layout
 import { Navbar } from './layout';
 
@@ -19,6 +19,8 @@ function App() {
           <Route path=":id" element={<Cart />} />
         </Route>
         <Route path='/signIn' element={<LogIn />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/Profile' element={<Profile />} />
       </Routes>
     </div>
   );
