@@ -55,6 +55,9 @@ All Steps:
 # 40 - Register action and reducer
 # 41 - Create Profile Page 
 # 42 - Update user info 
+# 43 - Shipping Page
+# 44 - Order Info Page
+# 45 - Add Orders to the database
 
 Documentation: 
 - https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend

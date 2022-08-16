@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FormContainer } from '../components/index';
 import { saveShippingAddress } from '../redux/actions/cartActions';
@@ -26,9 +26,6 @@ const Shipping = () => {
     <div className='app__shipping container'>
         <FormContainer>
         <h1>Shipping</h1>
-        {/* {message && <p>{message}</p>}
-        {error && <h3>{error}</h3>}
-        {loading && <Loader />} */}
         <form onSubmit={submitHandler}>
             <input type="text" placeholder='Address' value={address} onChange={(e) => setAddress(e.target.value)}  required/>
             <input type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} required/>
