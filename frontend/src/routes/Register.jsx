@@ -53,7 +53,6 @@ const Register = () => {
                 <button className='btn-primary'>Register</button>
                 <Link className='btn-primary' to={redirect ? `/signIn?redirect=${redirect}` : '/signIn'}>Login</Link>
             </div>
-
         </form>
     </FormContainer>
   )

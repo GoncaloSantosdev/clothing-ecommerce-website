@@ -33,12 +33,12 @@ const Cart = () => {
   }
 
   const checkoutHandler = () => {
-    navigate(`/login?redirect=${"/shipping"}`)
+    navigate('/shipping')
   }
 
   return (
     <div className='app__cart container'>
-      <h1>You Cart</h1>
+      <h1>Your Cart</h1>
       {cartItems.length === 0 ? alert(`Your cart is empty ${<Link className='btn-primary' to='/'>Go Back</Link>}`) : (
         <div className="app__cart-items">
           {cartItems.map((item, index) => (
