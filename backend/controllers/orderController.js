@@ -60,8 +60,15 @@ const updateOrderToPaid = async(req, res) => {
     }
 }
 
+// Get User Orders
+const getMyOrders = async(req, res) => {
+    const orders = await Order.find({ user: req.user._id });
+    res.json(orders);
+}
+
 export {
     addOrderItems,
     getOrderById,
-    updateOrderToPaid
+    updateOrderToPaid,
+    getMyOrders
 }

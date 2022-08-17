@@ -27,3 +27,15 @@
 .app__form-buttons{
     margin-top: 2rem;
 }
+
+.app__profile-orders{
+    .app__profile-order{
+        display: flex;
+        text-align: left;
+        
+        p{
+            margin-right: 1rem;
+            margin-top: 2rem;
+        }
+    }
+}

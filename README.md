@@ -13,6 +13,12 @@ Features:
 
 All Steps: 
 
+- Create Backend Route
+- Create Constant
+- Create Reducer
+- Create Action
+- Create the screen
+
 # 1 - Create Frontend Folder ( npx install create-react-app )
 # 2 - Install Frontend Dependencies ( React Router, Sass, React Icons )
 # 3 - Create Frontend Folder Structure
@@ -58,6 +64,10 @@ All Steps:
 # 43 - Shipping Page
 # 44 - Order Info Page
 # 45 - Add Orders to the database
+# 46 - Order pay reducer & action
+# 47 - Implement Paypal
+# 48 - Create sandbox and business account
+# 49 - Install Paypal Button (npm i react-paypal-button-v2 --force)
 
 Documentation: 
 - https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend

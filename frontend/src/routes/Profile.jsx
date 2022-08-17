@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { FormContainer, Loader } from '../components/index';
 import { getUserDetails, updateUserProfile } from '../redux/actions/userActions';
+import { listMyOrders } from '../redux/actions/orderActions'; 
 
 import './Profile.scss';
 
@@ -26,12 +27,16 @@ const Profile = () => {
     const userUpdateProfile  = useSelector(state => state.userUpdateProfile);
     const { success } = userUpdateProfile;
 
+    const orderListMy = useSelector(state => state.orderListMy);
+    const { loading: loadingOrders, error: errorOrders, orders } = orderListMy;
+
     useEffect(() => {
         if (!userInfo) {
             navigate('/login')
         } else {
             if(!user.name) {
                 dispatch(getUserDetails('profile'));
+                dispatch(listMyOrders());
             } else {
                 setName(user.name);
                 setEmail(user.email);
@@ -69,6 +74,20 @@ const Profile = () => {
         </div>
         <div className="app__profile-orders">
             <h2>My Orders</h2>
+            <div className="app__profile-orders-list">
+            {loadingOrders ? <Loader /> : (
+                <>
+                {orders.map(order => (
+                    <div className="app__profile-order">
+                        <p><span className='bold'>Order ID:</span> {order._id}</p>
+                        <p><span className='bold'>Date:</span> {order.createdAt.substring(0, 10)}</p>
+                        <p><span className='bold'>Price:</span> ${order.totalPrice}</p>
+                    </div>
+                ))}
+                </>
+            )}
+            </div>
+
         </div>
     </div>
   )
