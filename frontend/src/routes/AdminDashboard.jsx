@@ -1,0 +1,119 @@
+import React, { useEffect } from 'react';
+import { Link, useNavigate, useLocation, useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { listUsers, deleteUser } from '../redux/actions/userActions';
+import { listProducts, deleteProduct, createProduct } from '../redux/actions/productActions';
+import { PRODUCT_CREATE_RESET } from '../redux/constants/productConstants';
+import { Loader } from '../components';
+
+import './AdminDashboard.scss';
+
+const AdminDashboard = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const userList = useSelector(state => state.userList);
+  const { loading, error, users } = userList;
+
+  const userDelete = useSelector(state => state.userDelete);
+  const { success: userSuccessDelete } = userDelete;
+
+  const productList = useSelector(state => state.productList);
+  const { products } = productList;
+
+  const productDelete = useSelector(state => state.productDelete);
+  const { loading: loadingDelete, error: errorDelete, success: successDelete } = productDelete;
+
+  const productCreate = useSelector(state => state.productCreate);
+  const { loading: loadingCreate, error: errorCreate, success: successCreate, product: createdProduct } = productCreate;
+
+  // List users
+  useEffect(() => {
+    dispatch(listUsers());
+  }, [dispatch, userSuccessDelete]);
+
+  // Delete User
+  const deleteUserHandler = (id) => {
+    dispatch(deleteUser(id));
+  }
+
+  // List Products
+  useEffect(() => {
+    dispatch({ type: PRODUCT_CREATE_RESET });
+
+    if(successCreate){
+      navigate(`admin/product/${createdProduct._id}/edit`)
+    } else {
+      dispatch(listProducts())
+    }
+
+  }, [ dispatch, successDelete, successCreate, createdProduct ]);
+
+  // Delete Product
+  const deleteProductHandler = (id) => {
+    dispatch(deleteProduct(id));
+  }
+
+  // create product
+  const createProductHandler = () => {
+    dispatch(createProduct());
+  }
+
+  return (
+    <div className='app__dashboard container'>
+      <div className="app__dashboard-container">
+        <h1>Users List</h1>
+        {loadingDelete && <Loader /> };
+        {errorDelete && alert('Impossible to delete')};
+        {loadingCreate && <Loader /> };
+        {errorCreate && alert('Impossible to create')};
+        {loading ? <Loader /> : error ? alert('Error') : (
+            <div className="app__dashboard-list">
+                {users.map(user => (
+                  <>
+                    <div className='app__dashboard-list-item'>
+                        <p><span className='bold'>Name:</span> {user.name}</p>
+                        <p><span className='bold'>Email:</span> {user.email}</p>                      
+                        <button className='btn-primary' onClick={() => deleteUserHandler(user._id)}>
+                            Delete User
+                        </button>
+                    </div>
+                    <hr />
+                    </>
+                ))}
+            </div>
+        )}
+      </div>
+        <div className="app__dashboard-container">
+        <h1>Products</h1>
+        <div className="app__dashboard-createBtn">
+          <button className='btn-primary' onClick={createProductHandler}>
+              Create Product
+          </button>
+        </div>
+        {loading ? <Loader /> : error ? alert('Error') : (
+            <div className="app__dashboard-list">
+                {products.map(product => (
+                  <>
+                    <div className='app__dashboard-list-item'>
+                        <p><span className='bold'>Name:</span> {product.name}</p>
+                        <p><span className='bold'>Price:</span> ${product.price}</p>
+                        <p><span className='bold'>Category:</span> {product.category}</p>
+                        <Link className='btn-primary' to={`/admin/product/${product._id}/edit`}>
+                            Edit Product
+                        </Link>
+                        <button className='btn-primary' onClick={() => deleteProductHandler(product._id)}>
+                            Delete Product
+                        </button>
+                    </div>
+                    <hr />
+                  </>
+                ))}
+            </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+export default AdminDashboard;

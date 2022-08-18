@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 // Routes
-import { Home, ProductDetails, Cart, LogIn, Register, Profile, Shipping, Payment, PlaceOrder, Order } from './routes';
+import { Home, ProductDetails, Cart, LogIn, Register, Profile, Shipping, Payment, PlaceOrder, Order, AdminDashboard } from './routes';
 // Layout
 import { Navbar } from './layout';
 
@@ -25,6 +25,7 @@ function App() {
         <Route path='/payment' element={<Payment />} />
         <Route path='/placeorder' element={<PlaceOrder />} />
         <Route path='/order/:id' element={<Order />} />
+        <Route path='/admin/dashboard' element={<AdminDashboard />} />
       </Routes>
     </div>
   );

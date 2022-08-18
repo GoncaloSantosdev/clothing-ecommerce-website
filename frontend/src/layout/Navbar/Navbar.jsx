@@ -49,6 +49,9 @@ const Navbar = () => {
                     <div class="dropdown-content">
                         <Link to='/profile' onClick={closeMenu}>Profile</Link>
                         <Link to='/' onClick={logoutHandler}>Logout</Link>
+                        {userInfo && userInfo.isAdmin && (
+                            <Link to='/admin/dashboard'>Dashboard</Link>
+                        )} 
                     </div>
                 </div>
             ) : <div><FaUser /><Link to='/signIn'>Sign In</Link></div>}
@@ -69,6 +72,9 @@ const Navbar = () => {
                            <div class="dropdown-content">
                              <Link to='/profile' onClick={closeMenu}>Profile</Link>
                              <Link to='/' onClick={logoutHandler}>Logout</Link>
+                             {userInfo && userInfo.isAdmin && (
+                                <Link to='/admin/dashboard' onClick={closeMenu}>Dashboard</Link>
+                             )} 
                            </div>
                         </div>
                         ) : <div><FaUser /><Link to='/signIn' onClick={closeMenu}>Sign In</Link></div>}

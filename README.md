@@ -3,19 +3,21 @@
 E-Commerce Application
 
 Features:
-    [Core] User Login and Registration
+    [Core] User Login and Registration ✅
     [Core] Catalogue Page with [Stretch]User Reviews
-    [Core] Product Page/Component With Product Info
-    [Core] Cart For User Products
+    [Core] Product Page/Component With Product Info ✅
+    [Core] Cart For User Products ✅
     [Stretch] Admin product management
-    [Stretch] User management page
-    [Super Stretch] Stripe or Paypal Integration
+    [Stretch] User management page ✅
+    [Super Stretch] Stripe or Paypal Integration ✅
 
 All Steps: 
 
+- Create Controller
 - Create Backend Route
 - Create Constant
 - Create Reducer
+- Add to store
 - Create Action
 - Create the screen
 
@@ -68,6 +70,12 @@ All Steps:
 # 47 - Implement Paypal
 # 48 - Create sandbox and business account
 # 49 - Install Paypal Button (npm i react-paypal-button-v2 --force)
+# 50 - Create Admin Dashboard
+# 51 - List Users
+# 52 - Delete User
+# 53 - List Products
+# 54 - Remove product
+# 55 - Create Edit Route
 
 Documentation: 
 - https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend
