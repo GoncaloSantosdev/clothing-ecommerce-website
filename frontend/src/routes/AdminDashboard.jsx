@@ -42,7 +42,7 @@ const AdminDashboard = () => {
     dispatch({ type: PRODUCT_CREATE_RESET });
 
     if(successCreate){
-      navigate(`admin/product/${createdProduct._id}/edit`)
+      navigate(`/admin/product/${createdProduct._id}/edit`);
     } else {
       dispatch(listProducts())
     }
@@ -63,10 +63,6 @@ const AdminDashboard = () => {
     <div className='app__dashboard container'>
       <div className="app__dashboard-container">
         <h1>Users List</h1>
-        {loadingDelete && <Loader /> };
-        {errorDelete && alert('Impossible to delete')};
-        {loadingCreate && <Loader /> };
-        {errorCreate && alert('Impossible to create')};
         {loading ? <Loader /> : error ? alert('Error') : (
             <div className="app__dashboard-list">
                 {users.map(user => (

@@ -76,6 +76,7 @@ All Steps:
 # 53 - List Products
 # 54 - Remove product
 # 55 - Create Edit Route
+# 56 - Install Multer to upload files to server ( npm i multer )
 
 Documentation: 
 - https://github.com/GoncaloSantosdev/clothing-ecommerce-website/tree/main/frontend
