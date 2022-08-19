@@ -54,8 +54,7 @@ Documentation:
 
 Deployment:
 
--
--
+- https://clothingecommerceapp.herokuapp.com/
 
 Author: 
 
