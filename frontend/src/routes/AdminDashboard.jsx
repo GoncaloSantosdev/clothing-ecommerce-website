@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { listUsers, deleteUser } from '../redux/actions/userActions';
 import { listProducts, deleteProduct, createProduct } from '../redux/actions/productActions';
+import { listOrders } from '../redux/actions/orderActions';
 import { PRODUCT_CREATE_RESET } from '../redux/constants/productConstants';
 import { Loader } from '../components';
 
@@ -26,6 +27,9 @@ const AdminDashboard = () => {
 
   const productCreate = useSelector(state => state.productCreate);
   const { loading: loadingCreate, error: errorCreate, success: successCreate, product: createdProduct } = productCreate;
+
+  const orderList = useSelector(state => state.orderList);
+  const { loading: orderLoading, error: orderError, orders } = orderList;
 
   // List users
   useEffect(() => {
@@ -59,6 +63,11 @@ const AdminDashboard = () => {
     dispatch(createProduct());
   }
 
+  // List Orders
+  useEffect(() => {
+    dispatch(listOrders());
+  }, [dispatch]);
+
   return (
     <div className='app__dashboard container'>
       <div className="app__dashboard-container">
@@ -80,14 +89,14 @@ const AdminDashboard = () => {
             </div>
         )}
       </div>
-        <div className="app__dashboard-container">
+      <div className="app__dashboard-container">
         <h1>Products</h1>
         <div className="app__dashboard-createBtn">
           <button className='btn-primary' onClick={createProductHandler}>
               Create Product
           </button>
         </div>
-        {loading ? <Loader /> : error ? alert('Error') : (
+        {orderLoading ? <Loader /> : orderError ? alert('Error') : (
             <div className="app__dashboard-list">
                 {products.map(product => (
                   <>
@@ -104,6 +113,24 @@ const AdminDashboard = () => {
                     </div>
                     <hr />
                   </>
+                ))}
+            </div>
+        )}
+      </div>
+      <div className="app__dashboard-container">
+        <h1>Orders List</h1>
+        {orderLoading ? <Loader /> : orderError ? alert('Error') : (
+            <div className="app__dashboard-list">
+                {orders.map(order => (
+                  <>
+                    <div className='app__dashboard-list-item'>
+                        <p><span className='bold'>Id:</span> {order._id}</p>
+                        <p><span className='bold'>Name:</span> {order.user.name}</p>
+                        <p><span className='bold'>Price:</span> ${order.totalPrice}</p>
+                        <p><span className='bold'>Date:</span> {order.createdAt.substring(0, 10)}</p>
+                    </div>
+                    <hr />
+                    </>
                 ))}
             </div>
         )}

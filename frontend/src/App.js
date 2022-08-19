@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 // Routes
 import { Home, ProductDetails, Cart, LogIn, Register, Profile, Shipping, Payment, PlaceOrder, Order, AdminDashboard, ProductEdit } from './routes';
 // Layout
-import { Navbar } from './layout';
+import { Footer, Navbar } from './layout';
 
 import './App.scss';
 
@@ -28,6 +28,7 @@ function App() {
         <Route path='/admin/dashboard' element={<AdminDashboard />} />
         <Route path='/admin/product/:id/edit' element={<ProductEdit />}/> 
       </Routes>
+      <Footer />
     </div>
   );
 }

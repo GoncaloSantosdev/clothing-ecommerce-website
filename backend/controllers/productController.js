@@ -76,5 +76,5 @@ export {
     getProductById,
     deleteProduct,
     createProduct,
-    updateProduct
+    updateProduct,
 }

@@ -36,11 +36,6 @@ const Navbar = () => {
             </Link>
         </div>
 
-        <div className="app__nav-search">
-            <input type="text" placeholder='Search'/>
-            <button className="btn-primary">Search</button>
-        </div>
-
         <div className="app__nav-auth">
             <div><IoCart /><Link to='/cart'>Cart</Link></div>
             {userInfo ? (
