@@ -125,7 +125,7 @@ const AdminDashboard = () => {
                   <>
                     <div className='app__dashboard-list-item'>
                         <p><span className='bold'>Id:</span> {order._id}</p>
-                        <p><span className='bold'>Name:</span> {order.user.name}</p>
+                        {/* <p><span className='bold'>Name:</span> {order.user.name}</p> */}
                         <p><span className='bold'>Price:</span> ${order.totalPrice}</p>
                         <p><span className='bold'>Date:</span> {order.createdAt.substring(0, 10)}</p>
                     </div>
